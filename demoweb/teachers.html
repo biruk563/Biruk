@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, css, javascript">
+    <title>Teachers' Web Page</title>
+    <link rel="stylesheet" href="y.css">
+    <script>
+        function showClasses() {
+            const grade = document.getElementById("gradeSelect").value;
+            const classes = {
+                "11": ["Amharic"],
+                "11": ["English"],
+
+            };
+
+            const classList = document.getElementById("classList");
+            classList.innerHTML = ""; // Clear previous classes
+
+            if (classes[grade]) {
+                classes[grade].forEach(function (className) {
+                    const li = document.createElement("li");
+                    li.innerHTML = `${className} <button onclick="showDetails('${className}')">View Details</button>`;
+                    classList.appendChild(li);
+                });
+            }
+        }
+
+        function showDetails(className) {
+            const detailsSection = document.getElementById("details");
+            detailsSection.innerHTML = `
+                <h3>${className} Details</h3>
+                <h4>Uploaded Assignments</h4>
+                <ul>${generateList(10, 'Assignment')}</ul>
+                 <h4>Given Assignments</h4>
+                <ul>${generateList(10, 'Given')}</ul>
+                <h4>Lesson Plans</h4>
+                <ul>${generateList(5, 'Lesson Plan')}</ul>
+                <h4>Attendance</h4>
+                <ul>${generateList(4, 'Attendance Record')}</ul>
+            `;
+        }
+
+        function generateList(count, prefix) {
+            let listItems = '';
+            for (let i = 1; i <= count; i++) {
+                listItems += `<li>${prefix} ${i}</li>`;
+            }
+            return listItems;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Teachers' Web Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>About Us</h2>
+            <p>We are a dedicated team of teachers committed to providing quality education to our students. Choose a
+                grade to see the classes we offer!</p>
+        </section>
+
+        <section id="classes">
+            <h2>Classes Offered</h2>
+            <label for="gradeSelect">Select Grade:</label>
+            <select id="gradeSelect" onchange="showClasses()">
+                <option value="">--Select a Grade--</option>
+
+                <option value="11">Grade 11</option>
+
+            </select>
+            <ul id="classList"></ul>
+        </section>
+
+        <section id="details">
+            <!-- Class details will be displayed here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:teachers@example.com">teachers@example.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Our Teachers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

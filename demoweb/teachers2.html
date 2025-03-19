@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Web Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            /* Light background color */
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f1eeeecc, #524e50bd);
+            /* Gradient background */
+            color: #fff;
+            /* White text */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+            /* Gold color on hover */
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007bff8e;
+            /* Blue background */
+            color: #fff;
+            /* White text */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        h1 {
+            color: #fcfdfdbd;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 40px 0;
+            background: #222;
+            /* Dark gray background for sections */
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: #00bfff;
+            border-bottom: 2px solid #00bfff;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            display: inline-block;
+            background: #005f99;
+            /* Button background color */
+            color: #fff;
+            /* Button text color */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #003366;
+            /* Darker blue on hover */
+        }
+
+        .beki {
+            display: flex;
+            justify-content: center;
+        }
+
+        .beki p {
+            padding: 0 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome teacher John</h1>
+        <nav>
+            <ul>
+
+                <li><a href="#lesson-plans">Lesson Plans</a></li>
+                <li><a href="#grade 11 A">Section A</a></li>
+                <li><a href="#grade 11 B">Section B</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Teacher's page</h2>
+
+        </div>
+    </section>
+
+
+    <section id="resume" class="section">
+        <div class="container">
+            <h2>Assignments</h2>
+            <div class="beki">
+                <p><a href="Biruk Belete - Resume.pdf" target="_blank" class="button">Download 1</a></p>
+                <p><a href="Biruk Belete - Resume.pdf" target="_blank" class="button">Download 2</a></p>
+                <p><a href="Biruk Belete - Resume.pdf" target="_blank" class="button">Download 3</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
